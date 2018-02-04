@@ -1,7 +1,7 @@
 import pickle
 import numpy
 from flask import Flask,request, jsonify
-from flask_restful import Resource,Api
+
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
@@ -49,7 +49,7 @@ def perdict():
         vectorizer = TfidfVectorizer(sublinear_tf=True, max_df=0.5,stop_words='english')
         features_train_transformed = vectorizer.fit_transform(word_data).toarray()
         features_test_transformed  = vectorizer.transform(features_test).toarray()
-    
+
         model = LogisticRegression()
 
         model.fit(features_train_transformed,diseases)
