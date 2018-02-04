@@ -1,7 +1,7 @@
 aniso8601==2.0.0
 click==6.7
 Flask==0.12.2
-
+uwsgi
 itsdangerous==0.24
 Jinja2==2.10
 MarkupSafe==1.0
