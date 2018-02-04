@@ -1,7 +1,7 @@
 import pickle
 import numpy
 from flask import Flask,request, jsonify
-
+from flask_restful import Resource,Api
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
